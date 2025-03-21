@@ -61,7 +61,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
+    transition: .3s; 
 }
 
 .navbar a:hover,
@@ -99,7 +99,7 @@ body {
 }
 
 
-.hime-content h2::before{
+.home-content h2::before{
     content: '';
     position: absolute;
     top: 0;
@@ -243,88 +243,89 @@ body {
 }
 
 
-.about-info{
-    height:35vh;
+.About-me h1{
     display: flex;
-    align-items: center;
-    padding: 0 10%;
-    text-align: center;
-    justify-content: center;
-}
-
-.about-info h1{
-    display: flex;
-    text-align: center;
-    margin-top: 45px;
-    font-size: 56px;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    height: 35vh; /* Makes the section take most of the screen */
     font-weight: 700;
-    color: black;
-    line-height: 1.2;
-    height: 15vh;
-}
-.about-content p{
-    height:50vh;
-    display: flex;
-    justify-content: center; /* Centers the text horizontally */
-    align-items: center;     /* Centers the text vertically */
-    height: 100px;           /* Set a fixed height for demonstration */
-    width: 100%;             /* Set a fixed width for demonstration */
-    margin-top: 0.5em;
-    font-size: 15px;
-}
 
-.skills-content {
-    height:80vh;
+    
+    }
+
+    .about-me-content p{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 10;
+        padding: 1%;
+
+    }
+
+    .Full-stack h2 {
+        display: flex;
+        padding: 5%;
+        align-items: center;
+        font-weight: 700;
+        justify-content: center;
+        height: 30vh;
+
+    }
+    .Full-stack p{
+        align-items: center;
+        padding: 2%;
+        justify-content: center;
+        display: flex;
+        height: 5vh;
+
+    }
+    .skills-container {
+    height:30vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 5%
 }
 .skills-container {
-    display: flex; /* Creates a flexible container */
+    display: absolute; /* Creates a flexible container */
     justify-content: center; /* Centers images horizontally */
-    gap: 50px; /* Adds space between images */
+    gap: 20px; /* Adds space between images */
     flex-wrap: wrap; /* Allows wrapping to next line if the container is too narrow */
+    height: 20vh;
   }
   
   .skill-img {
-    width: 300px; /* Adjust the width of each skill image */
-    height: 500px; /* Adjust the height of each skill image */
+
+    width: 200px; /* Adjust the width of each skill image */
+    height: 200px; /* Adjust the height of each skill image */
     object-fit: contain; /* Ensures the image scales without distortion */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    height: 15vh;
+    transition: transform 0.4s ease; /* Smooth transition for hover effect */
+    height: 25vh;
   }
   
   .skill-img:hover {
     transform: scale(1.1); /* Enlarges the image on hover */
   }
-  @media (max-width: 600px) {
+  @media (max-width: 200px) {
     .skills-container {
       flex-direction: column; /* Stack images vertically on small screens */
       align-items: center;
     }
 }
-  
-  
 
-.mywork-info{
-    height:31vh;
+.Projects h1{
     display: flex;
-    align-items: center;
-    padding: 0 10%;
     text-align: center;
     justify-content: center;
-}
-
-.mywork-info h1{
-    display: flex;
-    text-align: center;
-    margin-top: 45px;
-    font-size: 56px;
+    height: 25vh;
     font-weight: 700;
-    color: black;
-    line-height: 1.2;
 }
 
+.mywork-content p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 15;
+}
 .mywork-info p{
     font-size: 15px;
     font-weight: 700;
@@ -337,53 +338,44 @@ body {
     text-align: center;
 }
 
-.certificate-info{
+.mywork-projects{
+    display: flex;
+}
+
+.certificates h1{
     height:31vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 20px;
     text-align: center;
     justify-content: center;
+    font-weight: 700;
 }
-
-.certificate-info h1{
+.certificate-content p{
+    justify-content: center;
+    text-align: center;
     display: flex;
-    text-align: center;
-    margin-top: 45px;
-    font-size: 56px;
-    font-weight: 700;
-    color: black;
-    line-height: 1.2;
+    padding: 2%;
 
 }
 
-.certificate-info p{
-    font-size: 15px;
-    font-weight: 700;
-    color: black;
-    max-width: 800px;
-    margin-left: 30px;
-   margin-top: 0.5em;
-   justify-content: center;
-   display: flex;
-    text-align: center;
+.certificate-projects img{
+    width: 300px; /* Set image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+    border: 3px solid #333; /* Adds a border */
 }
 
-.footer {
+
+/*
+.footer/*
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    padding: 10px;
+    position: flex;
     bottom: 0;
+    height: 10vh;
     width: 100%;
-}
-.footer a {
-    color: #f8b400;
-    text-decoration: none;
-    margin: 0 10px;
-}
-.footer a:hover {
-    text-decoration: underline;
-}
-
+    justify-content: center;}
