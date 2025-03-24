@@ -371,14 +371,52 @@ body {
 }
 
 
-/*
-.footer/*
+.contact-container h2{
+    margin-top: 10px;
+    height: 25vh;
+
+}
+.contact-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Input fields */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button */
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Footer (if you have one) */
+.footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: flex;
+    position: absolute;
     bottom: 0;
-    height: 10vh;
     width: 100%;
-    justify-content: center;}
+}
