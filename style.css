@@ -249,6 +249,7 @@ body {
     align-items: center; /* Centers text vertically */
     height: 35vh; /* Makes the section take most of the screen */
     font-weight: 700;
+    margin-top: 50px;
 
     
     }
@@ -259,6 +260,7 @@ body {
         display: flex;
         height: 10;
         padding: 1%;
+      
 
     }
 
@@ -283,7 +285,8 @@ body {
     height:30vh;
     display: flex;
     align-items: center;
-    padding: 5%
+    padding: 5%;
+    margin-top: 50px;
 }
 .skills-container {
     display: absolute; /* Creates a flexible container */
@@ -303,7 +306,7 @@ body {
   }
   
   .skill-img:hover {
-    transform: scale(1.1); /* Enlarges the image on hover */
+    transform: scale(1.5); /* Enlarges the image on hover */
   }
   @media (max-width: 200px) {
     .skills-container {
