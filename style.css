@@ -7,8 +7,7 @@
 }
 
 body {
-    background: url('bg.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('bg.jpg');
     position: relative;
     font-family: Arial, sans-serif;
 }
@@ -243,26 +242,75 @@ body {
 }
 
 
-.About-me h1{
-    display: flex;
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    height: 35vh; /* Makes the section take most of the screen */
+/* About Section */
+.about {
+    padding: 5% 10%;
+    background: url(bg.jpg); /* Semi-transparent background */
+    color: black;
+    text-align: center;
+    min-height: 10vh;
+    margin-top: 20px;
+}
+
+.about-me h1 {
+    font-size: 40px;
     font-weight: 700;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: goldenrod;
+    position: relative;
+}
 
-    
+.about-me h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 3px;
+    background-color: goldenrod;
+}
+
+.about-me-content {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+    /* Added Flexbox to center the paragraph */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%; /* Ensures it takes up the full height of the container */
+}
+
+.about-me-content p {
+    margin-bottom: 20px;
+    text-align: justify; /* Keeps the text justified inside the paragraph */
+}
+
+.about-me-content br {
+    line-height: 1; /* Adjust line breaks */
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 5% 5%;
     }
 
-    .about-me-content p{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        height: 10;
-        padding: 1%;
-      
-
+    .about-me h1 {
+        font-size: 30px;
     }
+
+    .about-me-content p {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 
     .Full-stack h2 {
         display: flex;
@@ -271,6 +319,7 @@ body {
         font-weight: 700;
         justify-content: center;
         height: 30vh;
+        margin-top: 20px;
 
     }
     .Full-stack p{
@@ -349,16 +398,17 @@ body {
     height:31vh;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 2%;
     text-align: center;
     justify-content: center;
     font-weight: 700;
+    margin-top: 20px;
 }
 .certificate-content p{
     justify-content: center;
     text-align: center;
     display: flex;
-    padding: 2%;
+    padding: 0.5px;
 
 }
 
@@ -371,24 +421,30 @@ body {
 }
 
 
-.contact-container h2{
-    margin-top: 10px;
-    height: 25vh;
-
-}
 .contact-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centers the contact form horizontally */
+    align-items: center; /* Centers the contact form vertically */
+    min-height: 100vh; /* Takes the full viewport height */
+    flex-direction: column; /* Stacks the form vertically */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centers the form horizontally */
+    align-items: center; /* Centers the form vertically */
+    min-height: 100vh; /* Ensures the container takes full height of the viewport */
+    flex-direction: column; /* Stacks the form elements vertically */
+}
+
+.contact-container h2 {
+    margin-top: 30px; /* Adjust the top margin of the heading */
+    font-weight: 700;
 }
 
 /* Input fields */
 input, textarea {
-    width: 100%;
+    width: 50%; /* Controls the width of the form elements */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -402,9 +458,10 @@ button {
     padding: 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%; /* Controls the width of the submit button */
     border-radius: 5px;
 }
+
 
 button:hover {
     background-color: #218838;
