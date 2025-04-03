@@ -85,6 +85,16 @@ body {
 #home-text{
     font-size: 2px;
 }
+.image-container {
+    max-width: 400px;  /* Adjust based on the desired image size */
+    flex-shrink: 0;  /* Prevents the image from shrinking */
+}
+
+.home-image {
+    width: 100%;  /* Makes sure the image fills the container */
+    border-radius: 10px;  /* Optional: Add some border radius to the image */
+    object-fit: cover;  /* Ensures the image covers the container without distortion */
+}
 
 .home-content h1{
     font-size: 56px;
@@ -272,29 +282,39 @@ body {
     background-color: goldenrod;
 }
 
+/* Adjusting About Me content */
 .about-me-content {
     font-size: 15px;
-    line-height: 1.8;
-    max-width: 400px;
+    line-height: 1.5;
+    max-width: 800px; /* Increased to give more room for text */
     margin: 0 auto;
     padding-top: 20px;
-
-    /* Added Flexbox to center the paragraph */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%; /* Ensures it takes up the full height of the container */
+    text-align: left; /* Align text to left */
 }
 
+/* Paragraph Styling */
 .about-me-content p {
     margin-bottom: 20px;
-    text-align: justify; /* Keeps the text justified inside the paragraph */
+    text-align: justify; /* Justified text */
 }
 
 .about-me-content br {
     line-height: 1; /* Adjust line breaks */
 }
 
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .about {
         padding: 5% 5%;
@@ -319,7 +339,7 @@ body {
         font-weight: 700;
         justify-content: center;
         height: 30vh;
-        margin-top: 20px;
+        margin-top: 10px;
 
     }
     .Full-stack p{
@@ -327,42 +347,44 @@ body {
         padding: 2%;
         justify-content: center;
         display: flex;
-        height: 5vh;
+        height: 3vh;
 
     }
     .skills-container {
-    height:30vh;
-    display: flex;
-    align-items: center;
-    padding: 5%;
-    margin-top: 50px;
-}
-.skills-container {
-    display: absolute; /* Creates a flexible container */
-    justify-content: center; /* Centers images horizontally */
-    gap: 20px; /* Adds space between images */
-    flex-wrap: wrap; /* Allows wrapping to next line if the container is too narrow */
-    height: 20vh;
-  }
-  
-  .skill-img {
-
-    width: 200px; /* Adjust the width of each skill image */
-    height: 200px; /* Adjust the height of each skill image */
-    object-fit: contain; /* Ensures the image scales without distortion */
-    transition: transform 0.4s ease; /* Smooth transition for hover effect */
-    height: 25vh;
-  }
-  
-  .skill-img:hover {
-    transform: scale(1.5); /* Enlarges the image on hover */
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px; /* Reduced gap between images */
+        flex-wrap: wrap;
+        margin-top: 20px; /* Reduced margin */
+        height: 20vh;
+    }
+    
+    .skill-img {
+        width: 250px; /* Adjusted size for better alignment */
+        height: 250px; /* Adjusted size for better alignment */
+        object-fit: contain;
+        transition: transform 0.4s ease;
+    }
+    
+    .skill-img:hover {
+        transform: scale(1.5); /* Enlarges the image on hover */
+    }
   @media (max-width: 200px) {
     .skills-container {
       flex-direction: column; /* Stack images vertically on small screens */
       align-items: center;
     }
 }
+.skills-container {
+    gap: 10px; /* Adjusted gap for smaller screens */
+}
+
+.skill-img {
+    width: 120px; /* Adjusted size for small screens */
+    height: 120px; /* Adjusted size for small screens */
+}
+
 
 .Projects h1{
     display: flex;
@@ -372,19 +394,14 @@ body {
     font-weight: 700;
 }
 
-.mywork-content p{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 15;
-}
+
 .mywork-info p{
     font-size: 15px;
     font-weight: 700;
     color: black;
-    max-width: 800px;
+    max-width: 500px;
     margin-left: 30px;
-   margin-top: 0.5em;
+   margin-top: 10px;
    justify-content: center;
    display: flex;
     text-align: center;
@@ -418,7 +435,7 @@ body {
 
 /* Button inside the project block */
 .project-button {
-    background-color: #4CAF50;
+    background-color: grey;
     color: white;
     font-size: 16px;
     padding: 10px 20px;
@@ -438,31 +455,80 @@ body {
     text-decoration: none;
 }
 
-.certificates h1{
-    height:31vh;
-    display: flex;
+/* Common Section Styling */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Certificates Section */
+.certificate {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative; /* Ensure section is above the footer */
+    z-index: 1; /* Keeps it above other elements */
+    min-height: 600px; /* Adjust if needed */
+}
+.soft-certificate{
+text-align: center;
+padding: 80px 20px;
+background-color: #f4f4f4;
+margin-top: 30px;
+border-radius: 10px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease-in-out;
+position: relative; /* Ensure section is above the footer */
+z-index: 1; /* Keeps it above other elements */
+min-height: 600px; /* Adjust if needed */
+}
+
+/* Ensure footer does not overlap content */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: relative; /* Change this if it's fixed */
+    bottom: 0;
+}
+
+/* Fix body and HTML height to allow scrolling */
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.certificate-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    padding: 2%;
-    text-align: center;
-    justify-content: center;
-    font-weight: 700;
-    margin-top: 20px;
-}
-.certificate-content p{
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    padding: 0.5px;
-
 }
 
-.certificate-projects img{
-    width: 300px; /* Set image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
-    border: 3px solid #333; /* Adds a border */
+/* Certificate Image Styling with Hover Effect */
+.certificate-gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.certificate-gallery img:hover {
+    transform: scale(1.5);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 
 .contact-container {
@@ -520,4 +586,33 @@ button:hover {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+/* Ensure the body and html take up the full height of the page */
+html, body {
+    height: 100%;  /* Full height of the viewport */
+    margin: 0;     /* Remove default margins */
+}
+
+/* Make sure the footer always stays at the bottom */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Positioning relative for easy placement */
+    bottom: 0;  /* Sticks to the bottom */
+    width: 100%;  /* Full width */
+    margin-top: auto; /* Pushes it to the bottom of the page */
+}
+
+/* For pages with more content, allow the footer to stay at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes at least the full height */
+}
+
+/* JavaScript to set the current year */
+#year {
+    font-weight: bold;
 }
