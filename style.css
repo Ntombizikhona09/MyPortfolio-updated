@@ -616,3 +616,26 @@ body {
 #year {
     font-weight: bold;
 }
+/* Container for the social media links */
+.social-media-links {
+    display: flex;
+    justify-content: center;  /* Aligns items horizontally in the center */
+    gap: 15px;  /* Space between the icons */
+    padding: 20px;
+}
+
+/* Style for each social media icon */
+.social-media-links a {
+    display: flex;  /* Ensures the icon is centered within the box */
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;  /* Icon size */
+    width: 50px;  /* Width of the box */
+    height: 50px;  /* Height of the box */
+    border-radius: 10px;  /* Rounded corners */
+    background-color: #f0f0f0;  /* Light gray background */
+    color: #333;  /* Default icon color */
+    text-decoration: none;  /* Remove the underline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
+}
+
